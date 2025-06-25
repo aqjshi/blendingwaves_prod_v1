@@ -1,0 +1,33 @@
+{{ template "header.html" . }}
+
+<section class="hero-banner">
+    <div class="hero-gradient">
+        <canvas id="interactive-liquid-canvas"></canvas>
+        <div class="hero-content">
+            <h2>Revolutionize your business strategies with the power of AI and Machine Learning, designed for modern impact.</h2>
+            <a href="#" class="button hero-button" onclick="scrollDown(); return false;">
+                Explore Our Products
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="showcase-section">
+    <div class="home-scroll-container">
+        {{ range .Items }}
+            <a href="{{ .ItemLink }}" class="item-wrapper">
+                <div class="video-container liquid-video-card">
+                    <video class="item-video" autoplay muted loop playsinline>
+                        <source src="{{ index .VideoPath 0 }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p class="home-item-title">{{ .KeywordTitle }}</p>
+                <p class="home-item-desc">{{ index .Texts 0 }}</p>
+                <p class="credits">Video credit: {{index .VideoCredit }}</p>
+            </a>
+        {{ end }}
+    </div>
+</section>
+
+{{ template "footer.html" . }}

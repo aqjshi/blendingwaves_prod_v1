@@ -1,0 +1,400 @@
+/* --- Global & Typography --- */
+body {
+    margin: 0;
+    /* Set a healthy margin-top to prevent content from hiding behind the fixed header */
+    margin-top: 180px; /* Adjust this based on your final header height */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: #001f3f;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* Fallback for browsers without WebGL support */
+.no-webgl .hero-banner {
+    background-color: #333;
+}
+
+
+/* --- Header --- */
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 15px 15px;
+    overflow: hidden; /* Important for glass effect */
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+
+.header-container.hidden {
+    transform: translateY(-100%);
+}
+
+.video-strip {
+    width: 100%;
+    height: 120px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Behind the title overlay */
+}
+
+.title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #f0f0f0;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 0 15px;
+}
+
+.main-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top:5px; 
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.company-logo {
+    max-height: 50px; /* Adjusted for a sleeker look */
+    margin-right: 15px;
+}
+
+.company-name {
+    margin: 0;
+    font-size: 2.2em;
+    color: #2c3e50;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-bar a:hover {
+    color: #007bff;
+}
+
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-bar a:hover::after {
+    width: 100%;
+}
+
+
+.hero-banner {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    /* A fallback background color in case WebGL fails */
+    background-color: #1a2a24;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Style the canvas to fill the container and sit behind the text */
+#interactive-liquid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sits behind hero-content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Sits on top of the canvas */
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+    text-align: center;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1.15em;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 50px; /* A more rounded shape enhances the glass feel */
+
+    /* --- Glass Effect --- */
+    /* 1. Translucent Background */
+    background-color: rgba(255, 255, 255, 0.15); 
+    
+    /* 2. Frosted Glass Blur (Interpreting ".1 blur" as a subtle blur) */
+    backdrop-filter: blur(.1px);
+    -webkit-backdrop-filter: blur(.5px);
+
+    /* 3. Edge Definition (Simulates light bending) */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    /* --- Smooth Transition --- */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.hero-button:hover {
+    /* --- More Intense Edge Bending on Hover --- */
+    background-color: rgba(255, 255, 255, 0.25); /* Slightly more opaque */
+    transform: translateY(-3px); /* Lifts the button more */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    border-color: rgba(255, 255, 255, 0.5); /* Edge highlight becomes brighter */
+}
+
+
+/* --- Mission Section --- */
+.mission-section {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* --- Showcase / Cards Section --- */
+.showcase-section {
+    padding: 60px 30px;
+    background-color: #f5f5f7;
+}
+
+.home-scroll-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-wrapper {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    /* ENHANCED TRANSITION FOR HYPER-FEEL */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.item-wrapper:hover {
+    /* Makes the card jump out and grow in a springy, "hyper" way */
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-out;
+}
+
+.item-wrapper:hover .video-container {
+    transform: scale(1.1);
+}
+
+.item-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-item-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 18px 18px 10px;
+    color: #001f3f;
+}
+
+.home-item-desc {
+    font-size: 0.9em; /* Slightly larger for readability */
+    margin: 0 18px 15px;
+    line-height: 1.5;
+    color: #555555;
+    flex-grow: 1; /* Allows description to push credits down */
+}
+
+.credits {
+    font-size: 0.75em; /* Slightly larger */
+    color: #333;
+    margin: 0 18px 15px;
+    text-align: right;
+    opacity: 0.6;
+}
+
+
+/* --- Footer --- */
+.site-footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+    color: #555555;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 15px 15px 0 0;
+}
+
+.site-footer a {
+    color: #001f3f;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.site-footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    body {
+        margin-top: 5px; /* Adjust for smaller header */
+    }
+    .header-container, .site-footer {
+        border-radius: 0;
+    }
+    .main-header-content {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    .nav-bar {
+        margin-top: 5px;
+        gap: 20px;
+    }
+    .company-name, .hero-content h2, .page-title {
+        font-size: 2em;
+    }
+    .title-overlay {
+        font-size: 1.4em;
+    }
+    .hero-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+    .home-scroll-container {
+        grid-template-columns: 1fr;
+    }
+    .video-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        gap: 15px;
+    }
+    .nav-bar a {
+        font-size: 0.9em;
+    }
+}

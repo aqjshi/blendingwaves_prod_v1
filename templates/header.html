@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="/main.js"></script>
+</head>
+<body>
+    <header class="header-container">
+        <div class="video-strip">
+            <video
+                class="video-element"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="/static/video/chalkboard.mp4" type="video/mp4" />
+            </video>
+            <div class="title-overlay">
+                Shape Industries Using Statistics and AI.
+            </div>
+        </div>
+
+        <div class="main-header-content"> 
+            <a href="/" class="logo-link">
+                <!-- Option 1: If you have a logo image -->
+                <img src="/static/images/logo.png" alt="BlendingWaves Logo" class="company-logo">
+                <!-- Option 2: If you prefer text for the company name -->
+                <h1 class="company-name">BlendingWaves</h1> 
+            </a>
+            <nav class="nav-bar">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>

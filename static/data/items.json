@@ -1,0 +1,59 @@
+[
+    {
+    "id": 1,
+    "keyword_title": "AI Quantitative Trading",
+    "texts": ["AI quantitative trading uses advanced machine learning models, statistical models, deep learning models and much high-performance computing power to analyze financial market data, find profitable possibilities, and act on them immediately to maximize the gain."],
+    "video_path": [
+      "/static/video/stock_market.mp4"
+    ],
+    "video_credit": [
+      "https://www.pexels.com/video/a-reel-time-record-of-cryptocurrency-9421909/"
+    ], 
+    "ItemLink": "https://google.com"
+  },
+
+   {
+    "id": 2,
+    "keyword_title": "Data Analysis and Ecommerce",
+    "texts": ["Data analysis and e-commerce, powered by machine learning (ML) and artificial intelligence (AI) algorithms, centers on transforming raw digital information into actionable insights and automated systems for online businesses. This process begins with meticulous data cleaning to ensure accuracy and consistency, followed by exploratory data analysis (EDA) to uncover hidden patterns and trends within vast datasets. Utilizing this cleaned and understood data, ML and AI algorithms drive critical e-commerce functions like personalized product recommendations, precise demand forecasting, intelligent fraud detection, and dynamic pricing strategies. Ultimately, this integration allows businesses to optimize operations, enhance customer experiences, and make data-driven decisions that propel growth and profitability."],
+
+    "video_path": [
+      "/static/video/ecommerce.mp4"
+    ],
+    "video_credit": [
+      "https://www.pexels.com/video/family-browsing-the-internet-6994619/"
+    ], 
+    "ItemLink": "https://google.com"
+  },
+
+
+    {
+    "id": 3,
+    "keyword_title": "AI Ecosystem",
+    "texts": ["An AI ecosystem represents a sophisticated network where multiple, specialized AI agents communicate and collaborate to achieve complex objectives that no single agent could accomplish independently. Each agent possesses unique expertise, contributing its specialized capabilities to a shared goal, much like different departments in a well-coordinated organization. This interconnectedness fosters collective intelligence, leading to emergent capabilities and more robust solutions through the synergistic exchange of information and insights. The result is a highly efficient and adaptable system capable of tackling intricate problems, automating complex workflows, and generating value far beyond the sum of its individual parts."],
+    "video_path": [
+      "/static/video/agents.mp4"
+    ],
+    "video_credit": [
+      "https://www.pexels.com/search/videos/automata/"
+    ], 
+    "ItemLink": "https://google.com"
+  },
+
+
+    {
+    "id": 4,
+    "keyword_title": "Full Stack Web Design UIUX/Backend",
+    "texts": ["Full Stack Web Design encompasses the complete development of web applications, seamlessly integrating both the user-facing and server-side components. The UI/UX (User Interface/User Experience) aspect focuses on crafting intuitive, aesthetically pleasing, and highly functional interfaces that users interact with directly, ensuring a smooth and enjoyable digital experience. Concurrently, backend development builds the unseen infrastructure, managing server-side logic, database interactions, and API development to power the application's core functionality and data management. Together, these disciplines combine to create robust, scalable, and user-centric web solutions from concept to deployment."],
+    "video_path": [
+      "/static/video/webdesign.mp4"
+    ],
+    "video_credit": [
+      "Video by Pavel Danilyuk: https://www.pexels.com/video/woman-typing-on-laptop-6764514/"
+    ], 
+    "ItemLink": "https://google.com"
+  }
+
+
+
+]

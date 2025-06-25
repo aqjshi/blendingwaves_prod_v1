@@ -1,0 +1,26 @@
+[
+    {
+    "id": 1,
+    "keyword_title": "pond top",
+    "image_path": [
+      "/static/images/pond_top.jpg"
+    ],
+    "image_credit": [
+      "https://www.pexels.com/photo/lotus-plants-in-water-13210997/"
+    ]
+
+  },
+
+      {
+    "id": 2,
+    "keyword_title": "pond bottom",
+    "image_path": [
+      "/static/images/pond_bottom.jpg"
+    ],
+    "image_credit": [
+      "https://www.pexels.com/photo/green-frog-on-algae-in-natural-pond-habitat-32615019/"
+    ]
+
+  }
+
+]
