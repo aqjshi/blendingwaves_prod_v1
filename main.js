@@ -163,7 +163,7 @@ LIQUID_HERO.init = function(canvas) {
                 // Displace bottom layer less for a parallax/depth effect
                 vec2 bottomUV = vUv + displacement * 0.05; // 50% of top displacement
                 vec4 bottomColor = texture2D(uBottomTexture, bottomUV);
-                bottomColor.rgb *= 0.6; // Apply 40% black shade
+                bottomColor.rgb *= 0.2; // Apply 40% black shade
 
                 // Blend the layers. Make top layer more transparent where it's displaced.
                 float displacementAmount = length(displacement);

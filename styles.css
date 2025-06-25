@@ -107,8 +107,9 @@ body {
 }
 
 .company-logo {
-    max-height: 50px; /* Adjusted for a sleeker look */
+    max-height: 100px; /* Adjusted for a sleeker look */
     margin-right: 15px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .company-name {
