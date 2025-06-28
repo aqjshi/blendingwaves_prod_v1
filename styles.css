@@ -129,7 +129,7 @@ body {
     color: #333333;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.05em;
+    font-size: 1.3em;
     padding: 5px 0;
     position: relative;
     transition: color 0.3s ease-in-out;
@@ -438,6 +438,18 @@ body {
     .nav-bar {
         gap: 4em;
     }
+
+    .nav-bar a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.3em;
+        padding: 5px 0;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+    }
+
+
     .company-name, .hero-content h2, .page-title {
         font-size: 1.6em;
     }
